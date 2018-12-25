@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainCtr.h"
 @interface AppDelegate ()
 
 @end
@@ -22,6 +22,10 @@
     IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
     keyboardManager.shouldResignOnTouchOutside = YES;
     keyboardManager.enableAutoToolbar = NO;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[MainCtr new]];
+    nav.navigationBarHidden = YES;
+    self.window.rootViewController = nav;
+    
     return YES;
 }
 

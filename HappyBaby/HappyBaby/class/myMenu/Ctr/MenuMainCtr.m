@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"本周菜单";
     // Do any additional setup after loading the view.
 }
 
