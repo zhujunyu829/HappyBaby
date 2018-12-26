@@ -10,6 +10,11 @@
 		0058EF6DF3E14FA43FFF165E /* libPods-HappyBabyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9454E402EED93914FD8B2753 /* libPods-HappyBabyTests.a */; };
 		03924E78AF84240967059B8E /* libPods-HappyBabyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26657587326EFB10BDA1C1B9 /* libPods-HappyBabyUITests.a */; };
 		86D2498D16AB0EDF61AC5F93 /* libPods-HappyBaby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A890585259C0DA78F964ED45 /* libPods-HappyBaby.a */; };
+		D995F26321D3129900DA51C5 /* MyMenuObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D995F26221D3129900DA51C5 /* MyMenuObj.m */; };
+		D995F26621D3130500DA51C5 /* MenuObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D995F26521D3130500DA51C5 /* MenuObj.m */; };
+		D995F26921D314B300DA51C5 /* FoodObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D995F26821D314B300DA51C5 /* FoodObj.m */; };
+		D995F26D21D31BBE00DA51C5 /* DbManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D995F26C21D31BBE00DA51C5 /* DbManger.m */; };
+		D995F27021D31CD500DA51C5 /* FileManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D995F26F21D31CD500DA51C5 /* FileManger.m */; };
 		D9E0D3A821D221DF00A03E2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E0D3A721D221DF00A03E2C /* AppDelegate.m */; };
 		D9E0D3AB21D221DF00A03E2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E0D3AA21D221DF00A03E2C /* ViewController.m */; };
 		D9E0D3AE21D221DF00A03E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E0D3AC21D221DF00A03E2C /* Main.storyboard */; };
@@ -68,6 +73,16 @@
 		9454E402EED93914FD8B2753 /* libPods-HappyBabyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HappyBabyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890585259C0DA78F964ED45 /* libPods-HappyBaby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HappyBaby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CFC5D48D7899DE89B45C04 /* Pods-HappyBaby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBaby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBaby/Pods-HappyBaby.debug.xcconfig"; sourceTree = "<group>"; };
+		D995F26121D3129900DA51C5 /* MyMenuObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMenuObj.h; sourceTree = "<group>"; };
+		D995F26221D3129900DA51C5 /* MyMenuObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMenuObj.m; sourceTree = "<group>"; };
+		D995F26421D3130500DA51C5 /* MenuObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuObj.h; sourceTree = "<group>"; };
+		D995F26521D3130500DA51C5 /* MenuObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuObj.m; sourceTree = "<group>"; };
+		D995F26721D314B300DA51C5 /* FoodObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodObj.h; sourceTree = "<group>"; };
+		D995F26821D314B300DA51C5 /* FoodObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodObj.m; sourceTree = "<group>"; };
+		D995F26B21D31BBE00DA51C5 /* DbManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DbManger.h; sourceTree = "<group>"; };
+		D995F26C21D31BBE00DA51C5 /* DbManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DbManger.m; sourceTree = "<group>"; };
+		D995F26E21D31CD500DA51C5 /* FileManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManger.h; sourceTree = "<group>"; };
+		D995F26F21D31CD500DA51C5 /* FileManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManger.m; sourceTree = "<group>"; };
 		D9E0D3A321D221DF00A03E2C /* HappyBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E0D3A621D221DF00A03E2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9E0D3A721D221DF00A03E2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +198,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D995F25F21D30F9E00DA51C5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D995F26121D3129900DA51C5 /* MyMenuObj.h */,
+				D995F26221D3129900DA51C5 /* MyMenuObj.m */,
+				D995F26421D3130500DA51C5 /* MenuObj.h */,
+				D995F26521D3130500DA51C5 /* MenuObj.m */,
+				D995F26721D314B300DA51C5 /* FoodObj.h */,
+				D995F26821D314B300DA51C5 /* FoodObj.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D995F26021D30FA300DA51C5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D995F26A21D31BAF00DA51C5 /* DBManger */ = {
+			isa = PBXGroup;
+			children = (
+				D995F26B21D31BBE00DA51C5 /* DbManger.h */,
+				D995F26C21D31BBE00DA51C5 /* DbManger.m */,
+			);
+			path = DBManger;
+			sourceTree = "<group>";
+		};
+		D995F27121D31CDB00DA51C5 /* FileManger */ = {
+			isa = PBXGroup;
+			children = (
+				D995F26E21D31CD500DA51C5 /* FileManger.h */,
+				D995F26F21D31CD500DA51C5 /* FileManger.m */,
+			);
+			path = FileManger;
+			sourceTree = "<group>";
+		};
 		D9E0D39A21D221DF00A03E2C = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +330,8 @@
 		D9E0D42E21D2250100A03E2C /* myMenu */ = {
 			isa = PBXGroup;
 			children = (
+				D995F26021D30FA300DA51C5 /* view */,
+				D995F25F21D30F9E00DA51C5 /* model */,
 				D9E0D42F21D2250100A03E2C /* Ctr */,
 			);
 			path = myMenu;
@@ -341,6 +396,8 @@
 		D9E0D44821D2250100A03E2C /* base */ = {
 			isa = PBXGroup;
 			children = (
+				D995F27121D31CDB00DA51C5 /* FileManger */,
+				D995F26A21D31BAF00DA51C5 /* DBManger */,
 				D9E0D44921D2250100A03E2C /* view */,
 				D9E0D45021D2250100A03E2C /* request */,
 			);
@@ -602,6 +659,7 @@
 			files = (
 				D9E0D46D21D2250100A03E2C /* GoodFoodCtr.m in Sources */,
 				D9E0D46E21D2250100A03E2C /* GLineView.m in Sources */,
+				D995F26321D3129900DA51C5 /* MyMenuObj.m in Sources */,
 				D9E0D46F21D2250100A03E2C /* HeadView.m in Sources */,
 				D9E0D47021D2250100A03E2C /* AppAlertView.m in Sources */,
 				D9E0D46421D2250100A03E2C /* EditMenuCtr.m in Sources */,
@@ -609,19 +667,23 @@
 				D9E0D47221D2250100A03E2C /* UIView+capture.m in Sources */,
 				D9E0D47121D2250100A03E2C /* RequestManger.m in Sources */,
 				D9E0D46821D2250100A03E2C /* LoginCtr.m in Sources */,
+				D995F26921D314B300DA51C5 /* FoodObj.m in Sources */,
 				D9E0D3AB21D221DF00A03E2C /* ViewController.m in Sources */,
 				D9E0D47721D2250100A03E2C /* NSString+Cheak.m in Sources */,
 				D9E0D3B621D221E000A03E2C /* main.m in Sources */,
 				D9E0D46A21D2250100A03E2C /* UserNotice.m in Sources */,
 				D9E0D46621D2250100A03E2C /* MenuMainCtr.m in Sources */,
 				D9E0D46C21D2250100A03E2C /* BangDingCtr.m in Sources */,
+				D995F26621D3130500DA51C5 /* MenuObj.m in Sources */,
 				D9E0D46521D2250100A03E2C /* AddMenuCtr.m in Sources */,
 				D9E0D46321D2250100A03E2C /* BadFoodCtr.m in Sources */,
 				D9E0D47621D2250100A03E2C /* UIColor+RGB.m in Sources */,
+				D995F26D21D31BBE00DA51C5 /* DbManger.m in Sources */,
 				D9E0D47321D2250100A03E2C /* NSDictionary+CheakValue.m in Sources */,
 				D9E0D46221D2250100A03E2C /* MainCtr.m in Sources */,
 				D9E0D47421D2250100A03E2C /* UIIamge+FixOrien.m in Sources */,
 				D9E0D46921D2250100A03E2C /* RegisterCtr.m in Sources */,
+				D995F27021D31CD500DA51C5 /* FileManger.m in Sources */,
 				D9E0D46721D2250100A03E2C /* HistoryMenuCtr.m in Sources */,
 				D9E0D3A821D221DF00A03E2C /* AppDelegate.m in Sources */,
 			);

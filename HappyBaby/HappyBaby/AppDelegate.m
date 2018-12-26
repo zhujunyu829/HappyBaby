@@ -25,6 +25,7 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[MainCtr new]];
     nav.navigationBarHidden = YES;
     self.window.rootViewController = nav;
+    [[DbManger sharManger]  creatDB];
     
     return YES;
 }
