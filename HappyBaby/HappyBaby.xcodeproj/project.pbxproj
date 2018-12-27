@@ -45,6 +45,9 @@
 		D9E0D47521D2250100A03E2C /* UIView+KGViewExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E0D45921D2250100A03E2C /* UIView+KGViewExtend.m */; };
 		D9E0D47621D2250100A03E2C /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E0D45B21D2250100A03E2C /* UIColor+RGB.m */; };
 		D9E0D47721D2250100A03E2C /* NSString+Cheak.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E0D45D21D2250100A03E2C /* NSString+Cheak.m */; };
+		D9F4280921D4B6E90019AD17 /* FoodCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F4280821D4B6E90019AD17 /* FoodCtr.m */; };
+		D9F4280C21D4B94B0019AD17 /* AddFoodCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F4280B21D4B94B0019AD17 /* AddFoodCtr.m */; };
+		D9F4280F21D4BE120019AD17 /* NSDate+conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F4280E21D4BE120019AD17 /* NSDate+conversion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +147,12 @@
 		D9E0D45F21D2250100A03E2C /* UIView+KGViewExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KGViewExtend.h"; sourceTree = "<group>"; };
 		D9E0D46021D2250100A03E2C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D9E0D46121D2250100A03E2C /* MainCtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCtr.h; sourceTree = "<group>"; };
+		D9F4280721D4B6E90019AD17 /* FoodCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodCtr.h; sourceTree = "<group>"; };
+		D9F4280821D4B6E90019AD17 /* FoodCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodCtr.m; sourceTree = "<group>"; };
+		D9F4280A21D4B94B0019AD17 /* AddFoodCtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFoodCtr.h; sourceTree = "<group>"; };
+		D9F4280B21D4B94B0019AD17 /* AddFoodCtr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFoodCtr.m; sourceTree = "<group>"; };
+		D9F4280D21D4BE120019AD17 /* NSDate+conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+conversion.h"; sourceTree = "<group>"; };
+		D9F4280E21D4BE120019AD17 /* NSDate+conversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+conversion.m"; sourceTree = "<group>"; };
 		FCE160ADCD1C0BC73CADB843 /* Pods-HappyBabyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBabyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyBabyUITests/Pods-HappyBabyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,6 +357,10 @@
 				D9E0D43521D2250100A03E2C /* HistoryMenuCtr.m */,
 				D9E0D43021D2250100A03E2C /* MenuMainCtr.h */,
 				D9E0D43421D2250100A03E2C /* MenuMainCtr.m */,
+				D9F4280721D4B6E90019AD17 /* FoodCtr.h */,
+				D9F4280821D4B6E90019AD17 /* FoodCtr.m */,
+				D9F4280A21D4B94B0019AD17 /* AddFoodCtr.h */,
+				D9F4280B21D4B94B0019AD17 /* AddFoodCtr.m */,
 			);
 			path = Ctr;
 			sourceTree = "<group>";
@@ -441,6 +454,8 @@
 				D9E0D45421D2250100A03E2C /* UIView+capture.m */,
 				D9E0D45F21D2250100A03E2C /* UIView+KGViewExtend.h */,
 				D9E0D45921D2250100A03E2C /* UIView+KGViewExtend.m */,
+				D9F4280D21D4BE120019AD17 /* NSDate+conversion.h */,
+				D9F4280E21D4BE120019AD17 /* NSDate+conversion.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -664,11 +679,13 @@
 				D9E0D47021D2250100A03E2C /* AppAlertView.m in Sources */,
 				D9E0D46421D2250100A03E2C /* EditMenuCtr.m in Sources */,
 				D9E0D47521D2250100A03E2C /* UIView+KGViewExtend.m in Sources */,
+				D9F4280921D4B6E90019AD17 /* FoodCtr.m in Sources */,
 				D9E0D47221D2250100A03E2C /* UIView+capture.m in Sources */,
 				D9E0D47121D2250100A03E2C /* RequestManger.m in Sources */,
 				D9E0D46821D2250100A03E2C /* LoginCtr.m in Sources */,
 				D995F26921D314B300DA51C5 /* FoodObj.m in Sources */,
 				D9E0D3AB21D221DF00A03E2C /* ViewController.m in Sources */,
+				D9F4280C21D4B94B0019AD17 /* AddFoodCtr.m in Sources */,
 				D9E0D47721D2250100A03E2C /* NSString+Cheak.m in Sources */,
 				D9E0D3B621D221E000A03E2C /* main.m in Sources */,
 				D9E0D46A21D2250100A03E2C /* UserNotice.m in Sources */,
@@ -685,6 +702,7 @@
 				D9E0D46921D2250100A03E2C /* RegisterCtr.m in Sources */,
 				D995F27021D31CD500DA51C5 /* FileManger.m in Sources */,
 				D9E0D46721D2250100A03E2C /* HistoryMenuCtr.m in Sources */,
+				D9F4280F21D4BE120019AD17 /* NSDate+conversion.m in Sources */,
 				D9E0D3A821D221DF00A03E2C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
