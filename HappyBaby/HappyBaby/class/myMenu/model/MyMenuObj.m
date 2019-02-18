@@ -10,4 +10,7 @@
 
 @implementation MyMenuObj
 
+- (NSString *)timeString{
+    return [self.time coverToYYYYMMDDW];
+}
 @end

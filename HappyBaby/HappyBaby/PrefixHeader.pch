@@ -13,6 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "AppMacro.h"
 #import "UIView+KGViewExtend.h"
+#import "UIViewController+BarButton.h"
 #import "masonry.h"
 #import "MBProgressHUD.h"
 #import "HeadView.h"

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) int menuID;
 @property (nonatomic, retain) NSDate *time;
 @property (nonatomic, copy) NSString *timeString;
-@property (nonatomic, retain) NSMutableArray *menuArr;
+@property (nonatomic, retain) NSMutableArray<MenuObj*> *menuArr;
 @end
 
 NS_ASSUME_NONNULL_END

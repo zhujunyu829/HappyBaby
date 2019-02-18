@@ -28,6 +28,7 @@
     UITabBarController *tab = [[UITabBarController alloc] init];
     
     tab.viewControllers =@[[self changeNav:[MenuMainCtr new]],[self changeNav:[GoodFoodCtr new]],[self changeNav:[BadFoodCtr new]]];
+    tab.hidesBottomBarWhenPushed = YES;
     [self.view addSubview:tab.view];
     tab.selectedIndex = 1;
     _tab = tab;
@@ -36,6 +37,7 @@
 }
 - (UIViewController *)changeNav:(UIViewController *)ctr{
     UINavigationController *nave = [[UINavigationController alloc] initWithRootViewController:ctr];
+    nave.hidesBottomBarWhenPushed = YES;
     return nave;
 }
 - (void)configBtn{

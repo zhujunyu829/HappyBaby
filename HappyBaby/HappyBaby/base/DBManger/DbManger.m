@@ -81,12 +81,46 @@ static DbManger *manger = nil;
    
     return success;
 }
+- (NSArray *)getAllFood{
+    __block NSMutableArray *arr = [NSMutableArray new];
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        NSString *seleSql = @"SELECT * FROM food";
+        FMResultSet *result = [db executeQuery:seleSql];
+        while ([result next]) {
+            FoodObj *m = [FoodObj new];
+            m.objID = [result intForColumn:@"food_id"];
+            m.name = [result stringForColumn:@"name"];
+            [arr addObject:m];
+        }
+        [result close];
+        
+    }];
+    return arr;
+
+}
 - (BOOL)updateFood:(FoodObj *)model{
     BOOL success = NO;
   
     return success;
 }
 #pragma mark - Menu
+- (NSArray *)getAllMenu{
+    __block NSMutableArray *arr = [NSMutableArray new];
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        NSString *seleSql = @"SELECT * FROM menu";
+        FMResultSet *result = [db executeQuery:seleSql];
+        while ([result next]) {
+            MenuObj *m = [MenuObj new];
+            m.objID = [result intForColumn:@"menu_id"];
+            m.name = [result stringForColumn:@"name"];
+            [arr addObject:m];
+        }
+        [result close];
+        
+    }];
+    return arr;
+}
+
 - (BOOL)insertMenu:(MenuObj *)mode{
     __block BOOL success = NO;
     [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
@@ -114,6 +148,7 @@ static DbManger *manger = nil;
     }];
     return success;
 }
+
 #pragma mark - myMenu
 - (BOOL )insertMenu:(MenuObj *)menu inMyMenu:(MyMenuObj *)myM{
     __block BOOL success = NO;
@@ -152,12 +187,12 @@ static DbManger *manger = nil;
         FMResultSet *resultSet = [db executeQuery:sql];
         if ([resultSet next]) {
             [resultSet close];
-            NSString *getSql = [NSString stringWithFormat:@"SELECT food.* FROM my_menu_table LEFT JOIN menu_data ON my_menu_table.time= menu_data.time LEFT JOIN food ON food.food_id = menu_data.menu_id WHERE my_menu_table.time ='%f';",time];
+            NSString *getSql = [NSString stringWithFormat:@"SELECT menu.* FROM my_menu_table LEFT JOIN menu_data ON my_menu_table.time= menu_data.time LEFT JOIN menu ON menu.menu_id = menu_data.menu_id WHERE my_menu_table.time ='%f';",time];
            FMResultSet *result = [db executeQuery:getSql];
             NSMutableArray *arr = [NSMutableArray new];
             while ([result next]) {
                 MenuObj *m = [MenuObj new];
-                m.objID = [result intForColumn:@"food_id"];
+                m.objID = [result intForColumn:@"menu_id"];
                 m.name = [result stringForColumn:@"name"];
                 [arr addObject:m];
             }

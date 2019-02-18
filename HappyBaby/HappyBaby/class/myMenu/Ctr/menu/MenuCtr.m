@@ -1,37 +1,32 @@
 //
-//  MenuMainCtr.m
-//  BaseProj
+//  MenuCtr.m
+//  HappyBaby
 //
-//  Created by feng on 2018/12/25.
-//  Copyright © 2018 zhujunyu. All rights reserved.
+//  Created by feng on 2019/2/18.
+//  Copyright © 2019 zhujunyu. All rights reserved.
 //
 
-#import "MenuMainCtr.h"
 #import "MenuCtr.h"
-@interface MenuMainCtr ()<UITableViewDelegate, UITableViewDataSource>
+#import "FoodCtr.h"
+@interface MenuCtr ()<UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *_table;
     NSMutableArray *_dataArr;
 }
+
 @end
 
-@implementation MenuMainCtr
+@implementation MenuCtr
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"本周菜单";
+    self.title = @"菜单";
     [self configTable];
     [self confiRightBtn];
     [self getData];
     // Do any additional setup after loading the view.
 }
-
 #pragma mark- configView
-
-- (void)confiRightBtn{
-    UIBarButtonItem *btn = [self getBarButtonItemName:@"菜单" addTarget:self sel:@selector(historyAction:)];
-    self.navigationItem.rightBarButtonItem = btn;
-}
 - (void)configTable{
     _dataArr = [NSMutableArray new];
     _table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -43,73 +38,51 @@
         make.edges.insets(UIEdgeInsetsZero);
     }];
 }
-
+- (void)confiRightBtn{
+    UIBarButtonItem *btn = [self getBarButtonItemName:@"食材" addTarget:self sel:@selector(foodAction:)];
+    self.navigationItem.rightBarButtonItem = btn;
+}
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return _dataArr.count;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    MyMenuObj *obj = [_dataArr objectAtIndex:section];
-    return  obj.menuArr.count;
+    return _dataArr.count;
+
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 44;
+    return CGFLOAT_MIN;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return CGFLOAT_MIN;
 }
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    MyMenuObj *obj = [_dataArr objectAtIndex:section];
-    UIView *headView = [UIView new];
-    headView.backgroundColor = [UIColor grayColor];
-    headView.width = tableView.width;
-    headView.height = 44;
-    UILabel *timeLabel = [UILabel new];
-    [headView addSubview:timeLabel];
-    [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(10);
-        make.height.mas_equalTo(headView.mas_height).offset(0);
-    }];
-    timeLabel.text = obj.timeString;
-    return headView;
+   
+    return nil;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    MyMenuObj *obj = [_dataArr objectAtIndex:indexPath.section];
+    MenuObj *obj = [_dataArr objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [obj.menuArr[indexPath.row] name];
+    cell.textLabel.text = obj.name;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
-
-#pragma mark - buttonAction
-- (void)historyAction:(id)sender{
-    MenuCtr *ctr = [MenuCtr new];
-    ctr.hidesBottomBarWhenPushed = YES;
+#pragma mark - action
+- (void)foodAction:(id)sender{
+    FoodCtr *ctr = [FoodCtr new];
     [self.navigationController pushViewController:ctr animated:YES];
-}
-#pragma mark - requst
-- (void)getData{
-    [_dataArr removeAllObjects];
-    NSDate *date =  [[NSDate dateStartOfWeek] changeToDay];
-    for (int i = 0 ; i < 7 ; i ++) {
-        NSDate *dayTime = [date offsetDay:i];
-        MyMenuObj *obj =  [[DbManger sharManger] getMyMenuDate:dayTime];
-        [_dataArr addObject:obj];
-    }
-    [_table reloadData];
-    
 }
 /*
 #pragma mark - Navigation
@@ -120,5 +93,11 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - requst
+- (void)getData{
+    [_dataArr removeAllObjects];
+    [_dataArr addObjectsFromArray:[[DbManger sharManger] getAllMenu]];
+    [_table reloadData];
+    
+}
 @end
